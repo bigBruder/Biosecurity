@@ -1,0 +1,33 @@
+@use '../../../../app/styles/helpers/variables.scss' as *;
+@use '../../../../app/styles/helpers/functions.scss' as func;
+
+.local {
+  position: relative;
+  padding-right: 12px;
+  cursor: pointer;
+
+  @media (min-width: $m-screen) {
+    padding-right: func.to-rem(12);
+  }
+}
+
+.eng {
+  display: block;
+
+  @media (min-width: $m-screen) {
+    width: func.to-rem(24);
+    height: func.to-rem(24);
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  @media (min-width: $m-screen) {
+    width: func.to-rem(8);
+    height: func.to-rem(8);
+  }
+}

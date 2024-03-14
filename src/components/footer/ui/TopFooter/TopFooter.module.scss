@@ -1,0 +1,119 @@
+@use '../../../../app/styles/helpers/variables.scss' as *;
+@use '../../../../app/styles/helpers/functions.scss' as func;
+@use '../../../../app/styles/helpers/mixin.scss' as *;
+
+.topFooter {
+  background-color: $white;
+  padding: func.to-rem(30) func.to-rem(17);
+  border-radius: func.to-rem(16);
+  margin-bottom: func.to-rem(30);
+
+  @media (min-width: $m-screen) {
+    padding: func.to-rem(30) func.to-rem(40);
+    margin-bottom: func.to-rem(44);
+  }
+}
+
+.topFooterInner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: $sm-screen) {
+    column-gap: func.to-rem(60);
+  }
+
+  @media (min-width: $m-screen) {
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: func.to-rem(93);
+  }
+}
+
+.content {
+  margin-bottom: func.to-rem(30);
+
+  @media (min-width: $sm-screen) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $m-screen) {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: func.to-rem(861);
+  }
+}
+
+.logo {
+  margin-bottom: func.to-rem(60);
+}
+
+.infoContent {
+  @media (min-width: $m-screen) {
+    display: flex;
+    margin-right: func.to-rem(89);
+    column-gap: func.to-rem(145);
+  }
+}
+
+.requestCall {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: func.to-rem(60);
+
+  @media (min-width: $m-screen) {
+    @include flexible(space-between);
+    align-items: flex-end;
+    margin-bottom: 0;
+  }
+}
+
+.requestButton {
+  margin-bottom: func.to-rem(16);
+  max-width: func.to-rem(164);
+}
+
+.requestCallContacts {
+  display: block;
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: func.to-rem(12);
+  font-style: normal;
+}
+
+.bottomFooterInner {
+  @media (min-width: $sm-screen) {
+    @include flexible(space-between);
+  }
+}
+
+.icons {
+  display: flex;
+  column-gap: func.to-rem(8);
+  margin-bottom: func.to-rem(16);
+
+  @media (min-width: $sm-screen) {
+    margin-bottom: 0;
+  }
+
+  svg {
+    width: func.to-rem(40);
+    height: func.to-rem(40);
+  }
+}
+
+.address {
+  font-size: func.to-rem(12);
+
+  @media (min-width: $m-screen) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.adressContacts {
+  display: block;
+  font-style: normal;
+}

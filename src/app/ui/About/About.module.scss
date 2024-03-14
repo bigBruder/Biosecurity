@@ -1,0 +1,72 @@
+@use '../../styles/helpers/variables.scss' as *;
+@use '../../styles/helpers/functions.scss' as func;
+
+.logoContainer {
+  margin-bottom: func.to-rem(30);
+
+  @media (min-width: $m-screen) {
+    margin-bottom: func.to-rem(60);
+  }
+
+  svg {
+    display: block;
+    width: func.to-rem(150);
+    height: func.to-rem(147);
+    margin: auto;
+
+    @media (min-width: $m-screen) {
+      width: func.to-rem(300);
+      height: func.to-rem(293);
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  font-style: italic;
+
+  @media (min-width: $m-screen) {
+    margin-bottom: func.to-rem(20);
+  }
+}
+
+.text {
+  font-style: italic;
+  font-size: func.to-rem(18);
+  text-align: center;
+  color: $black;
+
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(1240);
+    font-size: func.to-rem(34);
+    margin: auto;
+    letter-spacing: func.to-rem(1px);
+  }
+}
+
+.textThird,
+.textFirst {
+  margin-bottom: func.to-rem(27);
+
+  @media (min-width: $m-screen) {
+    margin-bottom: func.to-rem(47);
+  }
+}
+
+.textSecond {
+  @media (min-width: $m-screen) {
+    margin-bottom: func.to-rem(40);
+  }
+}
+
+.textThird {
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(970);
+  }
+}
+
+.textFourth {
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(700);
+  }
+}

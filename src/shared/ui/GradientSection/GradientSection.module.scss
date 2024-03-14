@@ -1,0 +1,19 @@
+@use '../../../app/styles/helpers/variables.scss' as *;
+@use '../../../app/styles/helpers/functions.scss' as func;
+
+.section {
+  border-radius: func.to-rem(60);
+}
+
+.green {
+  background: linear-gradient(188deg, #ffffff 7%, #d2dc3b 37.92%, #ffffff 86%);
+}
+
+.gray {
+  border-radius: func.to-rem(30) func.to-rem(30) 0 0;
+  background: linear-gradient(180deg, #d4d4d4 0%, #ffffff 100%);
+
+  @media (min-width: $m-screen) {
+    border-radius: func.to-rem(140) func.to-rem(140) 0 0;
+  }
+}

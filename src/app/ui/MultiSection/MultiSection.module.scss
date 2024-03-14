@@ -1,0 +1,54 @@
+@use '../../../app/styles/helpers/variables.scss' as *;
+@use '../../../app/styles/helpers/functions.scss' as func;
+
+.inner {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: func.to-rem(30);
+
+  &.isReverse {
+    @media (min-width: $m-screen) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media (min-width: $m-screen) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 func.to-rem(70);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: func.to-rem(30);
+
+  @media (min-width: $m-screen) {
+    row-gap: 0;
+    max-width: func.to-rem(734);
+  }
+
+  h2 {
+    line-height: initial;
+  }
+
+  p {
+    font-size: func.to-rem(18);
+
+    @media (min-width: $m-screen) {
+      margin-bottom: func.to-rem(38);
+      font-size: func.to-rem(24);
+    }
+  }
+}
+
+.button {
+  padding-top: func.to-rem(30);
+  padding-bottom: func.to-rem(30);
+
+  @media (min-width: $sm-screen) {
+    max-width: func.to-rem(126);
+  }
+}

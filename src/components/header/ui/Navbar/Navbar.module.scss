@@ -1,0 +1,21 @@
+@use '../../../../app/styles/helpers/mixin.scss' as *;
+@use '../../../../app/styles/helpers/variables.scss' as *;
+@use '../../../../app/styles/helpers/functions.scss' as func;
+
+.nav {
+  display: none;
+
+  @media (min-width: $m-screen) {
+    display: block;
+    min-width: func.to-rem(440);
+  }
+
+  @media (min-width: $lg-screen) {
+    min-width: func.to-rem(495);
+  }
+}
+
+.list {
+  @include flexible(space-between);
+  font-size: func.to-rem(16);
+}

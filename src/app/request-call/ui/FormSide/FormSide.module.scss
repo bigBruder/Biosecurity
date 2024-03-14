@@ -1,0 +1,38 @@
+@use '../../../styles/helpers/variables.scss' as *;
+@use '../../../styles/helpers/functions.scss' as func;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: func.to-rem(2);
+  flex-grow: 1;
+
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(384);
+  }
+}
+
+.title {
+  margin-bottom: func.to-rem(18);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: func.to-rem(26);
+}
+
+.inputField {
+  width: 100%;
+  color: $gray-1;
+}
+
+.textArea {
+  border: func.to-rem(1) solid $light-green;
+  border-radius: func.to-rem(22);
+  resize: none;
+  padding: func.to-rem(20);
+  width: 100%;
+
+  &::placeholder {
+    font-size: func.to-rem(16);
+    color: $gray-1;
+  }
+}

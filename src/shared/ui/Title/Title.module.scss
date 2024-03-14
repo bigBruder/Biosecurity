@@ -1,0 +1,14 @@
+@use '../../../app/styles/helpers/variables.scss' as *;
+@use '../../../app/styles/helpers/functions.scss' as func;
+
+.title {
+  font-weight: 500;
+  font-size: func.to-rem(40);
+  line-height: 2.22;
+  color: $black;
+
+  @media (min-width: $m-screen) {
+    font-size: func.to-rem(90);
+    line-height: 0.99;
+  }
+}

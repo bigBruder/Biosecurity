@@ -1,0 +1,140 @@
+@use '../../../app/styles/helpers/variables.scss' as *;
+@use '../../../app/styles/helpers/functions.scss' as func;
+
+.subtitle,
+.title {
+  margin-bottom: func.to-rem(30);
+}
+
+.title {
+  line-height: initial;
+  text-align: center;
+
+  @media (min-width: $m-screen) {
+    font-size: func.to-rem(40);
+    max-width: func.to-rem(770);
+    margin: 0 auto func.to-rem(38);
+  }
+}
+
+.subtitle {
+  font-size: func.to-rem(18);
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(770);
+    margin: 0 auto func.to-rem(70);
+  }
+}
+
+.slide {
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    row-gap: func.to-rem(13);
+
+    @media (min-width: $sm-screen) {
+      flex-direction: row;
+      gap: func.to-rem(8);
+    }
+  }
+}
+
+.imagesInner {
+  padding-bottom: func.to-rem(40);
+}
+
+.imageInner {
+  position: relative;
+  padding-bottom: func.to-rem(28);
+  width: 100%;
+
+  @media (min-width: $sm-screen) {
+    padding-bottom: func.to-rem(38);
+  }
+
+  @media (min-width: $m-screen) {
+    padding-bottom: func.to-rem(58);
+  }
+
+  @media (min-width: $lg-screen) {
+    padding-bottom: func.to-rem(38);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $s-screen) {
+      height: initial;
+    }
+
+    @media (min-width: $sm-screen) {
+      height: func.to-rem(120);
+    }
+
+    @media (min-width: $m-screen) {
+      height: func.to-rem(190);
+    }
+
+    @media (min-width: $m-screen) {
+      height: func.to-rem(202);
+    }
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: func.to-rem(18);
+    font-weight: 500;
+    line-height: 1;
+
+    @media (min-width: $sm-screen) {
+      font-size: func.to-rem(14);
+    }
+
+    @media (min-width: $m-screen) {
+      font-size: func.to-rem(24);
+    }
+  }
+}
+
+.bottomDesc {
+  display: block;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  margin-top: func.to-rem(30);
+
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(770);
+    margin: func.to-rem(60) auto 0;
+  }
+}
+
+.paginationContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.paginationButton {
+  cursor: pointer;
+  display: block;
+  height: func.to-rem(8);
+  width: func.to-rem(8);
+  border-radius: 50%;
+  background-color: #4d4d4d70;
+}
+
+.paginationButtonActive {
+  background-color: $black;
+}

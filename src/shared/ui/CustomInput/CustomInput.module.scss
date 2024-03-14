@@ -1,0 +1,7 @@
+@use '../../../app/styles/helpers/functions.scss' as func;
+
+.input {
+  border-radius: func.to-rem(22);
+  padding: func.to-rem(20);
+  border: 1px solid transparent;
+}

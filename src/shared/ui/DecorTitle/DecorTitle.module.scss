@@ -1,0 +1,23 @@
+@use '../../../app/styles/helpers/variables.scss' as *;
+
+.title {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.default {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: url('./images/cover-text.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+
+  @media (min-width: $m-screen) {
+    background-position: center;
+  }
+}
+
+.green {
+  color: $light-green;
+}

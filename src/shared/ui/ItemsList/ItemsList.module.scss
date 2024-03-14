@@ -1,0 +1,24 @@
+@use '../../../app/styles/helpers/variables.scss' as *;
+@use '../../../app/styles/helpers/functions.scss' as func;
+
+.title {
+  text-transform: uppercase;
+  font-size: func.to-rem(10);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: $black;
+  opacity: 0.6;
+  margin-bottom: func.to-rem(20);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: func.to-rem(4);
+  margin-bottom: func.to-rem(60);
+  line-height: 1.4;
+
+  @media (min-width: $m-screen) {
+    margin-bottom: 0;
+  }
+}

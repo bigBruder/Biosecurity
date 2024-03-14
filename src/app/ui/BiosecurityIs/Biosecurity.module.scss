@@ -1,0 +1,38 @@
+@use '../../../app/styles/helpers/variables.scss' as *;
+@use '../../../app/styles/helpers/functions.scss' as func;
+
+.title {
+  text-align: center;
+  font-size: func.to-rem(40);
+  font-weight: 500;
+  margin-bottom: func.to-rem(30);
+
+  @media (min-width: $m-screen) {
+    font-size: func.to-rem(54);
+    margin-bottom: func.to-rem(10);
+  }
+}
+
+.decorTitle {
+  font-weight: 700;
+  font-size: func.to-rem(50);
+
+  @media (min-width: $m-screen) {
+    letter-spacing: func.to-rem(-1.1);
+    font-size: func.to-rem(90);
+  }
+}
+
+.text {
+  text-align: center;
+  letter-spacing: func.to-rem(0.8);
+  font-size: func.to-rem(18);
+
+  @media (min-width: $m-screen) {
+    letter-spacing: func.to-rem(1);
+    font-size: func.to-rem(34);
+
+    max-width: func.to-rem(1200);
+    margin: auto;
+  }
+}

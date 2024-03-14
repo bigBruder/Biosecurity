@@ -1,0 +1,184 @@
+@use '../../../../styles/helpers/variables.scss' as *;
+@use '../../../../styles/helpers/mixin.scss' as *;
+@use '../../../../styles/helpers/functions.scss' as func;
+
+.leftSide {
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(865);
+    position: relative;
+    flex-grow: 1;
+  }
+}
+
+.title {
+  font-size: func.to-rem(30);
+  font-style: italic;
+  font-weight: 500;
+
+  @media (min-width: $s-screen) {
+    text-align: center;
+  }
+
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(525);
+    font-size: func.to-rem(54);
+    text-align: left;
+  }
+
+  @media (min-width: $lg-screen) {
+    margin-top: func.to-rem(50);
+  }
+}
+
+.decorTitle {
+  display: block;
+  font-size: func.to-rem(54);
+  font-weight: 700;
+
+  @media (min-width: $m-screen) {
+    display: inline;
+    font-size: func.to-rem(84);
+    margin-left: func.to-rem(10);
+  }
+}
+
+.imageInner {
+  display: none;
+
+  @media (min-width: $m-screen) {
+    display: block;
+    position: absolute;
+    width: 100%;
+
+    top: func.to-rem(200);
+  }
+
+  @media (min-width: $lg-screen) {
+    top: 0;
+    right: 0;
+    max-width: func.to-rem(592);
+  }
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: func.to-rem(8);
+  margin: auto;
+
+  position: relative;
+
+  @media (min-width: $sm-screen) {
+    width: func.to-rem(400);
+  }
+
+  @media (min-width: $lg-screen) {
+    width: func.to-rem(592);
+  }
+}
+
+.iconInner {
+  @include flexible;
+  z-index: 10;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: func.to-rem(100);
+  height: func.to-rem(100);
+
+  @media (min-width: $s-screen) {
+    width: func.to-rem(125);
+    height: func.to-rem(125);
+  }
+
+  @media (min-width: $sm-screen) {
+    width: func.to-rem(150);
+    height: func.to-rem(150);
+  }
+
+  @media (min-width: $m-screen) {
+    width: func.to-rem(200);
+    height: func.to-rem(200);
+  }
+
+  .eyeLogo {
+    position: absolute;
+
+    width: func.to-rem(40);
+    height: func.to-rem(38);
+
+    @media (min-width: $s-screen) {
+      width: func.to-rem(60);
+      height: func.to-rem(58);
+    }
+
+    @media (min-width: $m-screen) {
+      width: func.to-rem(72);
+      height: func.to-rem(70);
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: func.to-rem(53);
+    left: func.to-rem(31);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  span {
+    position: absolute;
+    bottom: func.to-rem(25);
+    font-size: func.to-rem(20);
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    display: block;
+    color: $white;
+
+    @media (min-width: $lg-screen) {
+      font-size: func.to-rem(24);
+      bottom: func.to-rem(49);
+    }
+  }
+}
+
+.cow {
+  @media (min-width: $lg-screen) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
+
+.people {
+  @media (min-width: $lg-screen) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+.plant {
+  @media (min-width: $lg-screen) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}

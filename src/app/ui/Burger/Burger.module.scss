@@ -1,0 +1,107 @@
+@use '../../styles/helpers/variables.scss' as *;
+@use '../../styles/helpers/mixin.scss' as *;
+@use '../../styles/helpers/functions.scss' as func;
+
+.aside {
+  position: fixed;
+  display: none;
+  background-color: $light-green;
+  inset: 0;
+  overflow-y: auto;
+  z-index: 11;
+  padding-bottom: 17px;
+
+  &.isOpen {
+    display: block;
+
+    @media (min-width: $m-screen) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $m-screen) {
+    display: none;
+  }
+}
+
+.topInner {
+  @include flexible(space-between);
+  padding-top: func.to-rem(14);
+  padding-bottom: func.to-rem(12);
+}
+
+.content {
+  padding: func.to-rem(30) func.to-rem(17);
+  background-color: $white;
+  border-radius: func.to-rem(16);
+  margin-bottom: func.to-rem(30);
+}
+
+.registrInner {
+  @include flexible(space-between);
+  column-gap: func.to-rem(20);
+  margin-bottom: func.to-rem(30);
+  max-width: func.to-rem(300);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.local {
+  cursor: pointer;
+
+  @include flexible(space-between);
+  position: relative;
+  padding-right: func.to-rem(15);
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}
+
+.signUp {
+  max-width: func.to-rem(119);
+}
+
+.requestCall {
+  max-width: func.to-rem(164);
+  margin-bottom: func.to-rem(16);
+
+  a {
+    width: 100%;
+    display: block;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: func.to-rem(30);
+  row-gap: func.to-rem(5);
+
+  a {
+    display: block;
+  }
+}
+
+.iconsInner {
+  display: flex;
+  column-gap: func.to-rem(8);
+  margin-bottom: func.to-rem(16);
+}
+
+.icon {
+  display: block;
+  width: 100%;
+  width: func.to-rem(40);
+  height: func.to-rem(40);
+}
+
+.bottomDesc {
+  width: func.to-rem(149);
+  font-size: func.to-rem(12);
+  font-weight: 600;
+  color: #1b1819;
+}

@@ -1,0 +1,68 @@
+@use '../../../../app/styles/helpers/variables.scss' as *;
+@use '../../../../app/styles/helpers/mixin.scss' as *;
+@use '../../../../app/styles/helpers/functions.scss' as func;
+
+.header {
+  padding-top: func.to-rem(12);
+  padding-bottom: func.to-rem(12);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 12;
+
+  background-color: $white;
+}
+
+.local,
+.signIn,
+.signUp {
+  display: none;
+
+  @media (min-width: $m-screen) {
+    display: block;
+  }
+}
+
+.inner {
+  @include flexible(space-between);
+}
+
+.leftHeader {
+  @include flexible(space-between);
+
+  @media (min-width: $m-screen) {
+    min-width: func.to-rem(620);
+  }
+
+  @media (min-width: $lg-screen) {
+    min-width: func.to-rem(760);
+  }
+}
+
+.rightHeader {
+  @media (min-width: $m-screen) {
+    @include flexible(space-between);
+    column-gap: func.to-rem(20);
+    min-width: func.to-rem(242);
+  }
+}
+
+.signIn {
+  width: func.to-rem(51);
+}
+
+.signUp {
+  @media (min-width: $m-screen) {
+    max-width: func.to-rem(119);
+  }
+}
+
+.scrollHeader {
+  transition: box-shadow 0.3s ease 0s;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.overflow {
+  overflow: hidden;
+}

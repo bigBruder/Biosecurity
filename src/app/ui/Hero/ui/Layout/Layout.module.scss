@@ -1,0 +1,21 @@
+@use '../../../../styles/helpers/variables.scss' as *;
+@use '../../../../styles/helpers/functions.scss' as func;
+
+.inner {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: func.to-rem(30);
+
+  @media (min-width: $m-screen) {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: func.to-rem(40);
+  }
+
+  @media (min-width: $lg-screen) {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 0;
+  }
+}

@@ -1,0 +1,77 @@
+@use '../../../../styles/helpers/variables.scss' as *;
+@use '../../../../styles/helpers/functions.scss' as func;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: func.to-rem(14);
+  background-image: url('../../../../images/home-page/hero/form-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: func.to-rem(60);
+
+  padding: func.to-rem(40) func.to-rem(16) func.to-rem(55);
+
+  @media (min-width: $s-screen) {
+    row-gap: func.to-rem(20);
+  }
+
+  @media (min-width: $m-screen) {
+    border-radius: func.to-rem(60) func.to-rem(60) func.to-rem(60) func.to-rem(160);
+    padding: func.to-rem(80) func.to-rem(64) func.to-rem(187);
+    width: 100%;
+    max-width: func.to-rem(513);
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: func.to-rem(30);
+  text-align: center;
+  color: $white;
+
+  @media (min-width: $m-screen) {
+    font-size: func.to-rem(44);
+    margin: auto;
+  }
+
+  span {
+    @media (min-width: $m-screen) {
+      display: block;
+    }
+  }
+}
+
+.fieldError {
+  border: func.to-rem(1) solid red;
+}
+
+.inputField {
+  width: 100%;
+
+  &::placeholder {
+    color: $gray-1;
+  }
+}
+
+.buttonInner {
+  @media (min-width: $m-screen) {
+    display: flex;
+    column-gap: func.to-rem(20);
+  }
+}
+
+.signUp {
+  display: block;
+}
+
+.or {
+  display: block;
+  text-align: center;
+  color: $white;
+  margin: func.to-rem(14) 0;
+
+  @media (min-width: $m-screen) {
+    display: none;
+  }
+}

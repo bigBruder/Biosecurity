@@ -1,0 +1,29 @@
+@use '../../../../../app/styles/helpers/variables.scss' as *;
+@use '../../../../../app/styles/helpers/functions.scss' as func;
+
+.list {
+  padding-left: func.to-rem(21);
+  font-style: italic;
+  font-size: func.to-rem(14);
+
+  @media (min-width: $m-screen) {
+    font-size: func.to-rem(18);
+    margin-bottom: func.to-rem(38);
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      content: '';
+      background-color: $black;
+      width: func.to-rem(3);
+      height: func.to-rem(3);
+      border-radius: 50%;
+
+      position: absolute;
+      left: func.to-rem(-10.5);
+      top: func.to-rem(8);
+    }
+  }
+}
